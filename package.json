@@ -1,0 +1,11 @@
+{
+  "name": "actividad_grupal_munoz-ballon",
+  "version": "1.0.0",
+  "description": "Trabajo grupal para el curso de Desarrollo de Recursos Animados para Web del Máster en Diseño y Desarrollo de Interfaz de Usuario Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diana Marcela Muñoz Rodriguez & Gabriel Andrés Ballón Fox",
+  "license": "ISC"
+}

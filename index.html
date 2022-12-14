@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios y SVG</title>
+  </head>
+  <body>
+    <form id="form" class="form">
+      <div id="formContent">
+        <div class="slide" id="primer_slide">
+          <div class="slide_content">
+            <label for="nombre"
+              ><i class="fa-solid fa-file-signature"></i>Nombre</label
+            >
+            <input type="text" name="nombre" />
+          </div>
+        </div>
+        <div class="slide" id="segundo_slide">
+          <div class="slide_content">
+            <label>Género</label>
+            <div class="option_container">
+              <div class="card_container">
+                <input type="radio" name="genero" id="m" value="Masculino" />
+                <label for="m"><i class="fa-solid fa-mars"></i>Masculino</label>
+              </div>
+              <div class="card_container">
+                <input type="radio" name="genero" id="f" value="Femenino" />
+                <label for="f"><i class="fa-solid fa-venus"></i>Femenino</label>
+              </div>
+              <div class="card_container">
+                <input
+                  type="radio"
+                  name="genero"
+                  id="nd"
+                  value="Prefiero no decirlo"
+                />
+                <label for="nd">
+                  <i class="fa-solid fa-genderless"></i>Prefiero no
+                  decirlo</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide" id="tercer_slide">
+          <div class="slide_content">
+            <label>Facultad a la que pertenece</label>
+            <div class="option_container">
+              <div class="card_container">
+                <input
+                  type="radio"
+                  name="facultad"
+                  id="admin_salud"
+                  value="Facultad de Ciencias Administrativas en Salud"
+                />
+                <label for="admin_salud"
+                  >Facultad de Ciencias Administrativas en Salud</label
+                >
+              </div>
+              <div class="card_container">
+                <input
+                  type="radio"
+                  name="facultad"
+                  id="movimiento"
+                  value="Facultad de Ciencias del Movimiento"
+                />
+                <label for="movimiento"
+                  >Facultad de Ciencias del Movimiento
+                </label>
+              </div>
+              <div class="card_container">
+                <input
+                  type="radio"
+                  name="facultad"
+                  id="sociales_educacion"
+                  value="Facultad de Ciencias Sociales y de Educación"
+                />
+                <label for="sociales_educacion"
+                  >Facultad de Ciencias Sociales y de Educación
+                </label>
+              </div>
+              <div class="card_container">
+                <input
+                  type="radio"
+                  name="facultad"
+                  id="enfermeria"
+                  value="Facultad de Enfermería"
+                />
+                <label for="enfermeria">Facultad de Enfermería</label>
+              </div>
+              <div class="card_container">
+                <input
+                  type="radio"
+                  name="facultad"
+                  id="inst_quirur"
+                  value="Facultad de Instrumentación Quirúrgica"
+                />
+                <label for="inst_quirur"
+                  >Facultad de Instrumentación Quirúrgica</label
+                >
+              </div>
+              <div class="card_container">
+                <input
+                  type="radio"
+                  name="facultad"
+                  id="medicina"
+                  value="Facultad de Medicina"
+                />
+                <label for="medicina">Facultad de Medicina</label>
+              </div>
+              <div class="card_container">
+                <input
+                  type="radio"
+                  name="facultad"
+                  id="tec_salud"
+                  value="Facultad de Tecnologías en Salud"
+                />
+                <label for="tec_salud">Facultad de Tecnologías en Salud</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button_container">
+          <nav>
+            <a href="#primer_slide"> Nombre </a>
+            <a href="#segundo_slide">Género</a>
+            <a href="#tercer_slide">Facultad</a>
+          </nav>
+        </div>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <script src="/src/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f1e973790b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
