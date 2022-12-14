@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" type="text/css" href="src/styles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
@@ -21,6 +21,7 @@
               ><i class="fa-solid fa-file-signature"></i>Nombre</label
             >
             <input type="text" name="nombre" />
+            <a href="#segundo_slide">Siguiente</a>
           </div>
         </div>
         <div class="slide" id="segundo_slide">
@@ -48,6 +49,8 @@
                 >
               </div>
             </div>
+            <a href="#primer_slide">Anterior</a>
+            <a href="#tercer_slide">Siguiente</a>
           </div>
         </div>
         <div class="slide" id="tercer_slide">
@@ -126,7 +129,12 @@
                 <label for="tec_salud">Facultad de Tecnologías en Salud</label>
               </div>
             </div>
+            <a href="#segundo_slide">Anterior</a>
+            <a href="#ultimo_slide">Siguiente</a>
           </div>
+        </div>
+        <div class="slide" id="ultimo_slide">
+          <button type="submit">Enviar</button>
         </div>
         <div class="button_container">
           <nav>
@@ -136,7 +144,6 @@
           </nav>
         </div>
       </div>
-      <button type="submit">Enviar</button>
     </form>
 
     <script src="/src/index.js"></script>
