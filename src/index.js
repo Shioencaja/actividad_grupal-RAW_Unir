@@ -18,3 +18,16 @@ var observer = new IntersectionObserver(
 observer.observe(document.querySelector("#primer_slide"));
 
 form.addEventListener("submit", onSubmit);
+
+var navButton = document.querySelector(".menu");
+var navBar = document.getElementById("nav");
+
+navButton.addEventListener("click", function () {
+  let expanded = this.getAttribute("aria-expanded") === "true" || false;
+  this.setAttribute("aria-expanded", !expanded);
+
+  let mostrar = navBar.getAttribute("mostrar") === "true" || false;
+  navBar.setAttribute("mostrar", !mostrar);
+
+  !mostrar ? (navBar.style.display = "flex") : (navBar.style.display = "none");
+});

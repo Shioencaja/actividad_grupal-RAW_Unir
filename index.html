@@ -13,6 +13,20 @@
     <title>Formularios y SVG</title>
   </head>
   <body>
+    <nav>
+      <button type="button" class="menu">
+        <svg width="32" height="32" stroke="#000" viewBox="0 0 16 16">
+          <line class="line1" x1="1" x2="15" y1="4" y2="4" />
+          <line class="line2" x1="1" x2="15" y1="8" y2="8" />
+          <line class="line3" x1="1" x2="15" y1="12" y2="12" />
+        </svg>
+      </button>
+      <div id="nav" mostrar="false">
+        <a class="nav-link" href="#primer_slide"> Nombre </a>
+        <a class="nav-link" href="#segundo_slide">Género</a>
+        <a class="nav-link" href="#tercer_slide">Facultad</a>
+      </div>
+    </nav>
     <form id="form" class="form">
       <div id="formContent">
         <div class="slide" id="primer_slide">
@@ -20,8 +34,8 @@
             <label for="nombre"
               ><i class="fa-solid fa-file-signature"></i>Nombre</label
             >
-            <input type="text" name="nombre" />
-            <a href="#segundo_slide">Siguiente</a>
+            <input type="text" name="nombre" class="form-control" />
+            <a class="button" href="#segundo_slide">Siguiente</a>
           </div>
         </div>
         <div class="slide" id="segundo_slide">
@@ -49,8 +63,10 @@
                 >
               </div>
             </div>
-            <a href="#primer_slide">Anterior</a>
-            <a href="#tercer_slide">Siguiente</a>
+            <div class="button_wrapper">
+              <a class="button" href="#primer_slide">Anterior</a>
+              <a class="button" href="#tercer_slide">Siguiente</a>
+            </div>
           </div>
         </div>
         <div class="slide" id="tercer_slide">
@@ -65,7 +81,7 @@
                   value="Facultad de Ciencias Administrativas en Salud"
                 />
                 <label for="admin_salud"
-                  >Facultad de Ciencias Administrativas en Salud</label
+                  >Ciencias Administrativas en Salud</label
                 >
               </div>
               <div class="card_container">
@@ -75,9 +91,7 @@
                   id="movimiento"
                   value="Facultad de Ciencias del Movimiento"
                 />
-                <label for="movimiento"
-                  >Facultad de Ciencias del Movimiento
-                </label>
+                <label for="movimiento">Ciencias del Movimiento </label>
               </div>
               <div class="card_container">
                 <input
@@ -87,7 +101,7 @@
                   value="Facultad de Ciencias Sociales y de Educación"
                 />
                 <label for="sociales_educacion"
-                  >Facultad de Ciencias Sociales y de Educación
+                  >Ciencias Sociales y de Educación
                 </label>
               </div>
               <div class="card_container">
@@ -97,7 +111,7 @@
                   id="enfermeria"
                   value="Facultad de Enfermería"
                 />
-                <label for="enfermeria">Facultad de Enfermería</label>
+                <label for="enfermeria">Enfermería</label>
               </div>
               <div class="card_container">
                 <input
@@ -106,9 +120,7 @@
                   id="inst_quirur"
                   value="Facultad de Instrumentación Quirúrgica"
                 />
-                <label for="inst_quirur"
-                  >Facultad de Instrumentación Quirúrgica</label
-                >
+                <label for="inst_quirur">Instrumentación Quirúrgica</label>
               </div>
               <div class="card_container">
                 <input
@@ -117,7 +129,7 @@
                   id="medicina"
                   value="Facultad de Medicina"
                 />
-                <label for="medicina">Facultad de Medicina</label>
+                <label for="medicina">Medicina</label>
               </div>
               <div class="card_container">
                 <input
@@ -126,22 +138,17 @@
                   id="tec_salud"
                   value="Facultad de Tecnologías en Salud"
                 />
-                <label for="tec_salud">Facultad de Tecnologías en Salud</label>
+                <label for="tec_salud">Tecnologías en Salud</label>
               </div>
             </div>
-            <a href="#segundo_slide">Anterior</a>
-            <a href="#ultimo_slide">Siguiente</a>
+            <div class="button_wrapper">
+              <a class="button" href="#segundo_slide">Anterior</a>
+              <a class="button" href="#ultimo_slide">Siguiente</a>
+            </div>
           </div>
         </div>
         <div class="slide" id="ultimo_slide">
           <button type="submit">Enviar</button>
-        </div>
-        <div class="button_container">
-          <nav>
-            <a href="#primer_slide"> Nombre </a>
-            <a href="#segundo_slide">Género</a>
-            <a href="#tercer_slide">Facultad</a>
-          </nav>
         </div>
       </div>
     </form>
