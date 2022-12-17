@@ -1,26 +1,22 @@
+/* Inicio del controlador del formulario */
+
 const form = document.getElementById("form");
-const slide = document.getElementsByClassName("slide");
 
 function onSubmit(e) {
   e.preventDefault();
   console.log("enviando");
 }
 
-let observer = new IntersectionObserver(
-  function (entries) {
-    entries[0].isIntersecting
-      ? console.log("Elemento visible")
-      : console.log("Elemento no visible");
-  },
-  { threshold: [1] }
-);
-
-observer.observe(document.querySelector("#primer_slide"));
-
 form.addEventListener("submit", onSubmit);
+/*Fin de controlador del formulario*/
+
+/**Inicio del controlador del botón menú */
 
 let navButton = document.querySelector(".menu");
 let navBar = document.getElementById("nav");
+
+//Un event listener para saber cuándo se hace click al botón menú, luego agregará o quitará
+//un atributo que activará las propiedades CSS para la animación
 
 navButton.addEventListener("click", function () {
   let expanded = this.getAttribute("aria-expanded") === "true" || false;
@@ -32,15 +28,20 @@ navButton.addEventListener("click", function () {
   !mostrar ? (navBar.style.display = "flex") : (navBar.style.display = "none");
 });
 
+/*Fin del controlador del botón menú */
+
+/*Inicio del loader que usa un Sprite SVG */
 const Loader = document.getElementById("loader");
 
-function loaderSite() {
+function loadSite() {
   Loader.style.display = "none";
 }
+//una event listerner para que al terminar de cargar la página agregue un display none al loader
 window.addEventListener(
   "load",
   () => {
-    setTimeout(loaderSite, 2500);
+    setTimeout(loadSite, 2500); //setTimeout para que aún si la velocidad de carga de la página es rápida, se pueda apreciar el loader
   },
   false
 );
+/*Fin del loader que usa un Sprite SVG */

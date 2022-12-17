@@ -13,12 +13,17 @@
     <title>Formularios y SVG</title>
   </head>
   <body>
+    <!--Acá comienza la actividad-->
+    <!--Animación de carga SPRITE SVG-->
     <div id="loader">
       <div class="animacion_wrapper">
         <div class="animacion"></div>
       </div>
     </div>
+    <!--Fin de animación de carga SPRITE SVG-->
+    <!--Inicio del botón menú con SVG animado que vuelve a su forma original luego de darle click-->
     <nav>
+      <!--Botón contenedor del SVG-->
       <button type="button" class="menu">
         <svg width="32" height="32" stroke="#000" viewBox="0 0 16 16">
           <line class="line1" x1="1" x2="15" y1="4" y2="4" />
@@ -26,27 +31,33 @@
           <line class="line3" x1="1" x2="15" y1="12" y2="12" />
         </svg>
       </button>
+      <!--Lista de los links del navbar que se muestran al dar click-->
       <div id="nav" mostrar="false">
         <a class="nav-link" href="#primer_slide"> Nombre </a>
         <a class="nav-link" href="#segundo_slide">Género</a>
         <a class="nav-link" href="#tercer_slide">Facultad</a>
       </div>
     </nav>
+    <!--Fin de botón menú con SVG animado que vuelve a su forma original luego de darle click-->
+    <!--Inicio de formulario para uso de los inputs, se separó cada pregunta en slides para mayor orden-->
     <form id="form" class="form">
       <div id="formContent">
+        <!--Pregunta 1 input texto-->
         <div class="slide" id="primer_slide">
           <div class="slide_content">
-            <label for="nombre"
-              ><i class="fa-solid fa-file-signature"></i>Nombre</label
-            >
+            <h2 for="nombre">
+              <i class="fa-solid fa-file-signature"></i>Nombre
+            </h2>
             <input type="text" name="nombre" class="form-control" />
             <a class="button" href="#segundo_slide">Siguiente</a>
           </div>
         </div>
+        <!--Pregunta 2 input radio-->
         <div class="slide" id="segundo_slide">
           <div class="slide_content">
-            <label>Género</label>
+            <h2>Género</h2>
             <div class="option_container">
+              <!--Card container con posición relativa para darle apariencia de botón contenedor al input radio-->
               <div class="card_container">
                 <input type="radio" name="genero" id="m" value="Masculino" />
                 <label for="m"><i class="fa-solid fa-mars"></i>Masculino</label>
@@ -74,10 +85,12 @@
             </div>
           </div>
         </div>
+        <!--Pregunta 3 input radio-->
         <div class="slide" id="tercer_slide">
           <div class="slide_content">
-            <label>Facultad a la que pertenece</label>
+            <h2>Facultad a la que pertenece</h2>
             <div class="option_container">
+              <!--Card container con posición relativa para darle apariencia de botón contenedor al input radio-->
               <div class="card_container">
                 <input
                   type="radio"
@@ -152,16 +165,20 @@
             </div>
           </div>
         </div>
+        <!--Botón enviar formulario, se le quitó la funcionalidad normal con JS-->
         <div class="slide" id="ultimo_slide">
-          <button type="submit">Enviar</button>
+          <button class="button" type="submit">Enviar</button>
         </div>
       </div>
     </form>
-
+    <!--Fin del formulario-->
+    <!--Script para traer el archivo js-->
     <script src="src/index.js"></script>
+    <!--Script que permite traer SVGs con CDN-->
     <script
       src="https://kit.fontawesome.com/f1e973790b.js"
       crossorigin="anonymous"
     ></script>
+    <!--Fin del contenido-->
   </body>
 </html>

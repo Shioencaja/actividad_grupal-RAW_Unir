@@ -1,3 +1,4 @@
+/*CSS base para el documento----------------------------------------*/
 * {
   box-sizing: border-box;
   font-size: 16px;
@@ -17,6 +18,12 @@ body {
   height: 100%;
   width: 100%;
 }
+
+input:focus-visible {
+  outline: none;
+}
+
+/*CSS para el formulario y contenido interior base*/
 
 form {
   margin: 0;
@@ -47,61 +54,6 @@ form {
   display: flex;
   gap: 0.5rem;
 }
-
-input[type=text] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-  border-left: 2px solid white;
-  padding: 0.5rem;
-  transition: all 0.2s;
-  border-bottom: 2px solid black;
-}
-
-input[type=text]:hover {
-  border-color: green;
-}
-
-input[type=text]:focus {
-  border-top-color: black;
-  border-left-color: black;
-  border-right-color: black;
-}
-
-input:focus-visible {
-  outline: none;
-}
-
-input[type=radio] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
-  margin: 0;
-  color: currentColor;
-  border: 2px solid currentColor;
-  border-radius: 1rem;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: all 0.2s;
-}
-
-input[type=radio]:focus {
-  border-color: blueviolet;
-}
-
-input[type=radio]:hover {
-  border-color: green;
-}
-
-input[type=radio]:checked {
-  border: 5px solid blue;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -124,6 +76,59 @@ input[type=radio]:checked {
   gap: 1rem;
   width: 100%;
   max-width: 800px;
+}
+
+/*CSS para el input texto -------------------*/
+input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  padding: 0.5rem;
+  transition: all 0.2s;
+  border-bottom: 2px solid black;
+}
+
+input[type="text"]:hover {
+  border-color: green;
+}
+
+input[type="text"]:focus {
+  border-top-color: black;
+  border-left-color: black;
+  border-right-color: black;
+}
+
+/*CSS para el input Radio*/
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  color: currentColor;
+  border: 2px solid currentColor;
+  border-radius: 1rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.2s;
+}
+
+input[type="radio"]:focus {
+  border-color: blueviolet;
+}
+
+input[type="radio"]:hover {
+  border-color: green;
+}
+
+input[type="radio"]:checked {
+  border: 5px solid blue;
 }
 
 .card_container {
@@ -150,7 +155,7 @@ input[type=radio]:checked {
   justify-content: center;
   gap: 1rem;
 }
-
+/*CSS para el contenido y botón del menú----------------------------------------*/
 #nav {
   display: none;
   position: fixed;
@@ -189,6 +194,9 @@ input[type=radio]:checked {
   text-decoration: underline;
 }
 
+/*CSS para el botón menú SVG---------------------------------------------------------------*/
+
+/*Estilos de los paths SVG*/
 .line1,
 .line2,
 .line3 {
@@ -205,6 +213,19 @@ input[type=radio]:checked {
 .line2 {
   transition: opacity 200ms ease-out;
 }
+/*Animaciones para las líneas SVG*/
+
+[aria-expanded="true"] .line2 {
+  opacity: 0;
+}
+[aria-expanded="true"] .line1 {
+  transform: translate(5.25px, -0.5px) rotate(45deg);
+}
+[aria-expanded="true"] .line3 {
+  transform: translate(-6.25px, 5px) rotate(-45deg);
+}
+
+/* CSS para el loader SVG hecho con Sprites-----------------------------------------------------------*/
 
 @-webkit-keyframes loading {
   from {
@@ -213,7 +234,7 @@ input[type=radio]:checked {
   to {
     transform: translateX(-296px);
   }
-}
+} /*Adicional para compatibilidad con más navegadores*/
 
 @keyframes loading {
   from {
@@ -234,7 +255,7 @@ input[type=radio]:checked {
   width: 296px;
   background-image: url("./imgs/sprite.svg");
   -webkit-animation: 0.3s steps(4) infinite loading;
-          animation: 0.3s steps(4) infinite loading;
+  animation: 0.3s steps(4) infinite loading;
 }
 
 #loader {
@@ -249,18 +270,10 @@ input[type=radio]:checked {
   background-color: white;
 }
 
-[aria-expanded=true] .line2 {
-  opacity: 0;
-}
-[aria-expanded=true] .line1 {
-  transform: translate(5.25px, -0.5px) rotate(45deg);
-}
-[aria-expanded=true] .line3 {
-  transform: translate(-6.25px, 5px) rotate(-45deg);
-}
+/* Media queries */
 
 @media (max-width: 720px) {
   .card_container {
     height: auto;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
