@@ -6,7 +6,7 @@ function onSubmit(e) {
   console.log("enviando");
 }
 
-var observer = new IntersectionObserver(
+let observer = new IntersectionObserver(
   function (entries) {
     entries[0].isIntersecting
       ? console.log("Elemento visible")
@@ -19,8 +19,8 @@ observer.observe(document.querySelector("#primer_slide"));
 
 form.addEventListener("submit", onSubmit);
 
-var navButton = document.querySelector(".menu");
-var navBar = document.getElementById("nav");
+let navButton = document.querySelector(".menu");
+let navBar = document.getElementById("nav");
 
 navButton.addEventListener("click", function () {
   let expanded = this.getAttribute("aria-expanded") === "true" || false;
@@ -31,3 +31,16 @@ navButton.addEventListener("click", function () {
 
   !mostrar ? (navBar.style.display = "flex") : (navBar.style.display = "none");
 });
+
+const Loader = document.getElementById("loader");
+
+function loaderSite() {
+  Loader.style.display = "none";
+}
+window.addEventListener(
+  "load",
+  () => {
+    setTimeout(loaderSite, 2500);
+  },
+  false
+);
